@@ -22,7 +22,7 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddSwaggerGen(option =>
 {
-    option.SwaggerDoc("v1", new OpenApiInfo { Title = "Demo API", Version = "v1" });
+    option.SwaggerDoc("v1", new OpenApiInfo { Title = "api-satayhoje", Version = "v1" });
     option.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
     {
         In = ParameterLocation.Header,
@@ -32,6 +32,9 @@ builder.Services.AddSwaggerGen(option =>
         BearerFormat = "JWT",
         Scheme = "Bearer"
     });
+
+
+
     option.AddSecurityRequirement(new OpenApiSecurityRequirement
     {
         {
@@ -52,7 +55,10 @@ builder.Services.AddControllers().AddNewtonsoftJson(options =>
 {
     options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
 });
-
+//adding swagger middleware
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+//enable the middleware for serving the generated JSON document and the Swagger UI,
 
 
 
@@ -129,7 +135,8 @@ app.UseCors(x => x
      .AllowAnyMethod()
      .AllowAnyHeader()
      .AllowCredentials()
-      .WithOrigins("http://localhost:5167/")
+     // .WithOrigins("http://localhost:5167/")
+     .AllowAnyMethod()
       .SetIsOriginAllowed(origin => true));
 
 app.UseAuthentication();
