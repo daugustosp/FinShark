@@ -1,25 +1,32 @@
-#See https://aka.ms/customizecontainer to learn how to customize your debug container and how Visual Studio uses this Dockerfile to build your images for faster debugging.
-
+# Etapa base (imagem para execução)
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
-USER app
 WORKDIR /app
 EXPOSE 8080
 EXPOSE 8081
 
+# Etapa de build
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY ["src/Api.Render/Api.Render.csproj", "Api.Render/"]
-RUN dotnet restore "./Api.Render/Api.Render.csproj"
-COPY . .
 
-RUN dotnet build "src/Api.Render/Api.Render.csproj" -c $BUILD_CONFIGURATION -o /app/build
+# Copia o arquivo .csproj
+COPY api/FinShark/FinShark.csproj ./FinShark/
+RUN dotnet restore "./FinShark/FinShark.csproj"
 
+# Copia o restante dos arquivos
+COPY ./api ./FinShark/
+
+# Compila o projeto
+WORKDIR /src/FinShark
+RUN dotnet build "FinShark.csproj" -c $BUILD_CONFIGURATION -o /app/build
+
+# Publicação
 FROM build AS publish
 ARG BUILD_CONFIGURATION=Release
-RUN dotnet publish "src/Api.Render/Api.Render.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
+RUN dotnet publish "FinShark.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
 
+# Imagem final
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "Api.Render.dll"]
+ENTRYPOINT ["dotnet", "FinShark.dll"]
