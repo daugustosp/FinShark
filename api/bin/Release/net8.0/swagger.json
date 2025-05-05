@@ -1,0 +1,1512 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "XXX API",
+    "version": "v1"
+  },
+  "paths": {
+    "/api/account/login": {
+      "post": {
+        "tags": [
+          "Account"
+        ],
+        "consumes": [
+          "application/json-patch+json",
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/LoginDto"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/account/register": {
+      "post": {
+        "tags": [
+          "Account"
+        ],
+        "consumes": [
+          "application/json-patch+json",
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/RegisterDto"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/account/registerCliente": {
+      "post": {
+        "tags": [
+          "Account"
+        ],
+        "consumes": [
+          "application/json-patch+json",
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/RegisterDto"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/avaliacaoGratuita": {
+      "post": {
+        "tags": [
+          "AvaliacaoGratuita"
+        ],
+        "consumes": [
+          "application/json-patch+json",
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/AvaliacaoGratuita"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "AvaliacaoGratuita"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "PageNumber",
+            "type": "integer",
+            "format": "int32",
+            "collectionFormat": "multi"
+          },
+          {
+            "in": "query",
+            "name": "PageSize",
+            "type": "integer",
+            "format": "int32",
+            "collectionFormat": "multi"
+          },
+          {
+            "in": "query",
+            "name": "idCliente",
+            "type": "integer",
+            "format": "int32",
+            "collectionFormat": "multi"
+          },
+          {
+            "in": "query",
+            "name": "dataInicial",
+            "type": "string",
+            "format": "date-time",
+            "collectionFormat": "multi"
+          },
+          {
+            "in": "query",
+            "name": "dataFinal",
+            "type": "string",
+            "format": "date-time",
+            "collectionFormat": "multi"
+          },
+          {
+            "in": "query",
+            "name": "id",
+            "type": "integer",
+            "format": "int32",
+            "collectionFormat": "multi"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/avaliacaoGratuita/api/avaliacaoGratuita/GetStatus": {
+      "get": {
+        "tags": [
+          "AvaliacaoGratuita"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "PageNumber",
+            "type": "integer",
+            "format": "int32",
+            "collectionFormat": "multi"
+          },
+          {
+            "in": "query",
+            "name": "PageSize",
+            "type": "integer",
+            "format": "int32",
+            "collectionFormat": "multi"
+          },
+          {
+            "in": "query",
+            "name": "idCliente",
+            "type": "integer",
+            "format": "int32",
+            "collectionFormat": "multi"
+          },
+          {
+            "in": "query",
+            "name": "dataInicial",
+            "type": "string",
+            "format": "date-time",
+            "collectionFormat": "multi"
+          },
+          {
+            "in": "query",
+            "name": "dataFinal",
+            "type": "string",
+            "format": "date-time",
+            "collectionFormat": "multi"
+          },
+          {
+            "in": "query",
+            "name": "id",
+            "type": "integer",
+            "format": "int32",
+            "collectionFormat": "multi"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/avaliacaoGratuita/api/avaliacaoGratuita/GetConsolidado": {
+      "get": {
+        "tags": [
+          "AvaliacaoGratuita"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "PageNumber",
+            "type": "integer",
+            "format": "int32",
+            "collectionFormat": "multi"
+          },
+          {
+            "in": "query",
+            "name": "PageSize",
+            "type": "integer",
+            "format": "int32",
+            "collectionFormat": "multi"
+          },
+          {
+            "in": "query",
+            "name": "idCliente",
+            "type": "integer",
+            "format": "int32",
+            "collectionFormat": "multi"
+          },
+          {
+            "in": "query",
+            "name": "dataInicial",
+            "type": "string",
+            "format": "date-time",
+            "collectionFormat": "multi"
+          },
+          {
+            "in": "query",
+            "name": "dataFinal",
+            "type": "string",
+            "format": "date-time",
+            "collectionFormat": "multi"
+          },
+          {
+            "in": "query",
+            "name": "id",
+            "type": "integer",
+            "format": "int32",
+            "collectionFormat": "multi"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/avaliacaoGratuita/{id}": {
+      "put": {
+        "tags": [
+          "AvaliacaoGratuita"
+        ],
+        "consumes": [
+          "application/json-patch+json",
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/AvaliacaoDto"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/cliente/{id}": {
+      "get": {
+        "tags": [
+          "Cliente"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Cliente"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Cliente"
+        ],
+        "consumes": [
+          "application/json-patch+json",
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/UpdateClienteDto"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/cliente": {
+      "post": {
+        "tags": [
+          "Cliente"
+        ],
+        "consumes": [
+          "application/json-patch+json",
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/CreateClienteDto"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "Cliente"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/comment": {
+      "get": {
+        "tags": [
+          "Comment"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "Symbol",
+            "type": "string",
+            "collectionFormat": "multi"
+          },
+          {
+            "in": "query",
+            "name": "IsDecsending",
+            "type": "boolean",
+            "collectionFormat": "multi"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/comment/{id}": {
+      "get": {
+        "tags": [
+          "Comment"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Comment"
+        ],
+        "consumes": [
+          "application/json-patch+json",
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/UpdateCommentRequestDto"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Comment"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/comment/{symbol}": {
+      "post": {
+        "tags": [
+          "Comment"
+        ],
+        "consumes": [
+          "application/json-patch+json",
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "symbol",
+            "required": true,
+            "type": "string",
+            "pattern": "^[A-Za-z]*$"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/CreateCommentDto"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/upload": {
+      "get": {
+        "tags": [
+          "Estadia"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Estadia"
+        ],
+        "consumes": [
+          "multipart/form-data"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "idCliente",
+            "type": "integer",
+            "format": "int32",
+            "collectionFormat": "multi"
+          },
+          {
+            "in": "formData",
+            "name": "file",
+            "type": "file"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/ganho/{id}": {
+      "get": {
+        "tags": [
+          "Ganho"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Ganho"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Ganho"
+        ],
+        "consumes": [
+          "application/json-patch+json",
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/UpdateGanhosDto"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/ganho": {
+      "post": {
+        "tags": [
+          "Ganho"
+        ],
+        "consumes": [
+          "application/json-patch+json",
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/CreateGanhosDto"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "Ganho"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "PageNumber",
+            "type": "integer",
+            "format": "int32",
+            "collectionFormat": "multi"
+          },
+          {
+            "in": "query",
+            "name": "PageSize",
+            "type": "integer",
+            "format": "int32",
+            "collectionFormat": "multi"
+          },
+          {
+            "in": "query",
+            "name": "idCliente",
+            "type": "integer",
+            "format": "int32",
+            "collectionFormat": "multi"
+          },
+          {
+            "in": "query",
+            "name": "dataInicial",
+            "type": "string",
+            "format": "date-time",
+            "collectionFormat": "multi"
+          },
+          {
+            "in": "query",
+            "name": "dataFinal",
+            "type": "string",
+            "format": "date-time",
+            "collectionFormat": "multi"
+          },
+          {
+            "in": "query",
+            "name": "id",
+            "type": "integer",
+            "format": "int32",
+            "collectionFormat": "multi"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/portfolio": {
+      "get": {
+        "tags": [
+          "Portfolio"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Portfolio"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "symbol",
+            "type": "string",
+            "collectionFormat": "multi"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Portfolio"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "symbol",
+            "type": "string",
+            "collectionFormat": "multi"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/propriedade": {
+      "post": {
+        "tags": [
+          "Propriedade"
+        ],
+        "consumes": [
+          "application/json-patch+json",
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/PropriedadeDto"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "Propriedade"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "PageNumber",
+            "type": "integer",
+            "format": "int32",
+            "collectionFormat": "multi"
+          },
+          {
+            "in": "query",
+            "name": "PageSize",
+            "type": "integer",
+            "format": "int32",
+            "collectionFormat": "multi"
+          },
+          {
+            "in": "query",
+            "name": "idCliente",
+            "type": "integer",
+            "format": "int32",
+            "collectionFormat": "multi"
+          },
+          {
+            "in": "query",
+            "name": "dataInicial",
+            "type": "string",
+            "format": "date-time",
+            "collectionFormat": "multi"
+          },
+          {
+            "in": "query",
+            "name": "dataFinal",
+            "type": "string",
+            "format": "date-time",
+            "collectionFormat": "multi"
+          },
+          {
+            "in": "query",
+            "name": "id",
+            "type": "integer",
+            "format": "int32",
+            "collectionFormat": "multi"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/propriedade/{id}": {
+      "get": {
+        "tags": [
+          "Propriedade"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Propriedade"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Propriedade"
+        ],
+        "consumes": [
+          "application/json-patch+json",
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/PropriedadeDto"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/propriedade/api/propriedade/BuscaPropriedades": {
+      "get": {
+        "tags": [
+          "Propriedade"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/stock": {
+      "get": {
+        "tags": [
+          "Stock"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "PageNumber",
+            "type": "integer",
+            "format": "int32",
+            "collectionFormat": "multi"
+          },
+          {
+            "in": "query",
+            "name": "PageSize",
+            "type": "integer",
+            "format": "int32",
+            "collectionFormat": "multi"
+          },
+          {
+            "in": "query",
+            "name": "idCliente",
+            "type": "integer",
+            "format": "int32",
+            "collectionFormat": "multi"
+          },
+          {
+            "in": "query",
+            "name": "dataInicial",
+            "type": "string",
+            "format": "date-time",
+            "collectionFormat": "multi"
+          },
+          {
+            "in": "query",
+            "name": "dataFinal",
+            "type": "string",
+            "format": "date-time",
+            "collectionFormat": "multi"
+          },
+          {
+            "in": "query",
+            "name": "id",
+            "type": "integer",
+            "format": "int32",
+            "collectionFormat": "multi"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Stock"
+        ],
+        "consumes": [
+          "application/json-patch+json",
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/CreateStockRequestDto"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/stock/{id}": {
+      "get": {
+        "tags": [
+          "Stock"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Stock"
+        ],
+        "consumes": [
+          "application/json-patch+json",
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/UpdateStockRequestDto"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Stock"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "AvaliacaoDto": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "status": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "AvaliacaoGratuita": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "nomeCompleto": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "telefone": {
+          "type": "string"
+        },
+        "comoConheceu": {
+          "type": "string"
+        },
+        "endereco": {
+          "type": "string"
+        },
+        "tipoImovel": {
+          "type": "string"
+        },
+        "area": {
+          "type": "string"
+        },
+        "nQuartos": {
+          "type": "string"
+        },
+        "nBanheiros": {
+          "type": "string"
+        },
+        "vagas": {
+          "type": "string"
+        },
+        "imovelImobiliado": {
+          "type": "string"
+        },
+        "comodidades": {
+          "type": "string"
+        },
+        "detalhes": {
+          "type": "string"
+        },
+        "fotos": {
+          "type": "string"
+        },
+        "imovelTemporada": {
+          "type": "boolean"
+        },
+        "expectativaFaturamento": {
+          "type": "string"
+        },
+        "observ": {
+          "type": "string"
+        },
+        "dataCriacacao": {
+          "format": "date-time",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "CreateClienteDto": {
+      "required": [
+        "cpf",
+        "email",
+        "endereco",
+        "nome"
+      ],
+      "type": "object",
+      "properties": {
+        "nome": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "cpf": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "endereco": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "email": {
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "CreateCommentDto": {
+      "required": [
+        "content",
+        "title"
+      ],
+      "type": "object",
+      "properties": {
+        "title": {
+          "maxLength": 280,
+          "minLength": 5,
+          "type": "string"
+        },
+        "content": {
+          "maxLength": 280,
+          "minLength": 5,
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "CreateGanhosDto": {
+      "required": [
+        "ganhoBruto"
+      ],
+      "type": "object",
+      "properties": {
+        "ganhoBruto": {
+          "format": "double",
+          "type": "number"
+        }
+      },
+      "additionalProperties": false
+    },
+    "CreateStockRequestDto": {
+      "required": [
+        "companyName",
+        "industry",
+        "lastDiv",
+        "purchase",
+        "symbol"
+      ],
+      "type": "object",
+      "properties": {
+        "symbol": {
+          "maxLength": 10,
+          "minLength": 1,
+          "type": "string"
+        },
+        "companyName": {
+          "maxLength": 10,
+          "minLength": 1,
+          "type": "string"
+        },
+        "purchase": {
+          "format": "double",
+          "maximum": 1000000000,
+          "minimum": 1,
+          "type": "number"
+        },
+        "lastDiv": {
+          "format": "double",
+          "maximum": 100,
+          "minimum": 0,001,
+          "type": "number"
+        },
+        "industry": {
+          "maxLength": 10,
+          "minLength": 1,
+          "type": "string"
+        },
+        "marketCap": {
+          "format": "int64",
+          "maximum": 5000000000,
+          "minimum": 1,
+          "type": "integer"
+        }
+      },
+      "additionalProperties": false
+    },
+    "LoginDto": {
+      "required": [
+        "password",
+        "username"
+      ],
+      "type": "object",
+      "properties": {
+        "username": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "password": {
+          "maxLength": 20,
+          "minLength": 6,
+          "pattern": "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[\\W_]).{6,}$",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "PropriedadeDto": {
+      "type": "object",
+      "properties": {
+        "enderecoPropriedade": {
+          "type": "string"
+        },
+        "tipoPropriedade": {
+          "type": "string"
+        },
+        "descricaoPropriedade": {
+          "type": "string"
+        },
+        "idCliente": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "nomePropriedade": {
+          "type": "string"
+        },
+        "qttQuartos": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "qttBanheiros": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "tamanho": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "fotos": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "RegisterDto": {
+      "required": [
+        "email",
+        "password",
+        "username"
+      ],
+      "type": "object",
+      "properties": {
+        "username": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "email": {
+          "format": "email",
+          "minLength": 1,
+          "type": "string"
+        },
+        "password": {
+          "maxLength": 20,
+          "minLength": 6,
+          "pattern": "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[\\W_]).{6,}$",
+          "type": "string"
+        },
+        "fullName": {
+          "type": "string"
+        },
+        "telefone": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "UpdateClienteDto": {
+      "type": "object",
+      "properties": {
+        "nome": {
+          "type": "string"
+        },
+        "endereco": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "cpf": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "UpdateCommentRequestDto": {
+      "required": [
+        "content",
+        "title"
+      ],
+      "type": "object",
+      "properties": {
+        "title": {
+          "maxLength": 280,
+          "minLength": 5,
+          "type": "string"
+        },
+        "content": {
+          "maxLength": 280,
+          "minLength": 5,
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "UpdateGanhosDto": {
+      "required": [
+        "ganhoBruto",
+        "taxaManutencao",
+        "taxaServiço",
+        "totalLiquido"
+      ],
+      "type": "object",
+      "properties": {
+        "ganhoBruto": {
+          "format": "double",
+          "type": "number"
+        },
+        "taxaServiço": {
+          "format": "double",
+          "type": "number"
+        },
+        "taxaManutencao": {
+          "format": "double",
+          "type": "number"
+        },
+        "totalLiquido": {
+          "format": "double",
+          "type": "number"
+        }
+      },
+      "additionalProperties": false
+    },
+    "UpdateStockRequestDto": {
+      "required": [
+        "companyName",
+        "industry",
+        "lastDiv",
+        "purchase",
+        "symbol"
+      ],
+      "type": "object",
+      "properties": {
+        "symbol": {
+          "maxLength": 10,
+          "minLength": 1,
+          "type": "string"
+        },
+        "companyName": {
+          "maxLength": 10,
+          "minLength": 1,
+          "type": "string"
+        },
+        "purchase": {
+          "format": "double",
+          "maximum": 1000000000,
+          "minimum": 1,
+          "type": "number"
+        },
+        "lastDiv": {
+          "format": "double",
+          "maximum": 100,
+          "minimum": 0,001,
+          "type": "number"
+        },
+        "industry": {
+          "maxLength": 10,
+          "minLength": 1,
+          "type": "string"
+        },
+        "marketCap": {
+          "format": "int64",
+          "maximum": 5000000000,
+          "minimum": 1,
+          "type": "integer"
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "securityDefinitions": {
+    "Bearer": { }
+  },
+  "security": [
+    {
+      "Bearer": [ ]
+    }
+  ]
+}
